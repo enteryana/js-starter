@@ -4,7 +4,7 @@ alert("Hello there, you can use this simple calculator");
 
 let num1 = Number(prompt("Enter number 1 :"));
 let num2 = Number(prompt("Enter number 2:"));
-let operator = (prompt("Choose operation (+, -, *, /):"));
+let operator = prompt("Choose operation (+, -, *, /):");
 let result;
 
 if (operator === '+') {
