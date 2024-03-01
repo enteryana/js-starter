@@ -4,7 +4,7 @@ alert("Hello there, you can use this simple calculator");
 
 let num1 = Number(prompt("Enter number 1 :"));
 let num2 = Number(prompt("Enter number 2:"));
-let operator = Number (prompt("Choose operation (+, -, *, /):"));
+let operator = prompt("Choose operation (+, -, *, /):");
 let result;
 
 if (operator === '+') {
@@ -14,9 +14,13 @@ if (operator === '+') {
 } else if (operator === '*') {
     result = num1 * num2;
 } else if (operator === '/') {
+    if (num2 !== 0) {
         result = num1 / num2;
-    } if (num2 !== 0) {
-        result = "Error";
-} 
+    } else {
+        result = "Error: division by zero";
+    }
+} else {
+    result = "Error";
+}
 
 alert(`Result: ${result}`);
