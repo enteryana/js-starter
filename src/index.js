@@ -14,9 +14,13 @@ if (operator === '+') {
 } else if (operator === '*') {
     result = num1 * num2;
 } else if (operator === '/') {
+    if (num2 !== 0) {
         result = num1 / num2;
-    } if (num2 !== 0) {
-        result = "Error";
-} 
+    } else {
+        result = "Error: division by zero";
+    }
+} else {
+    result = "Error";
+}
 
 alert(`Result: ${result}`);
